@@ -1,0 +1,36 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Some practical tasks with algorithms",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "npm run lint && jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyrlyanskiy/algorithms.git"
+  },
+  "keywords": [],
+  "author": "Andrii Diachenko",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/Tyrlyanskiy/algorithms/issues"
+  },
+  "homepage": "https://github.com/Tyrlyanskiy/algorithms#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-json": "^3.1.0",
+    "jest": "^27.2.0",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
