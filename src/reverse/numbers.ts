@@ -6,8 +6,6 @@ If reversing x causes the value to go outside the signed 32-bit integer range [-
 */
 
 export function reverse(x: number): number {
-  const isNegative = x < 0;
-
   const arrayOfDigits = Array.from(String(Math.abs(x)), Number);
   let leftIndex = 0;
   let rightIndex = arrayOfDigits.length - 1;
@@ -20,13 +18,7 @@ export function reverse(x: number): number {
     rightIndex = rightIndex - 1;
   }
 
-  const stringNumbers = arrayOfDigits.join();
-  let stringNumber = stringNumbers.replace(/,/g, "");
-
-  if (isNegative) {
-    stringNumber = '-' + stringNumbers.replace(/,/g, "");
-  }
-
+  const stringNumber = arrayOfDigits.join('');
   const result = parseInt(stringNumber, 10);
 
   const maxInt = Math.pow(2, 31) - 1;
@@ -36,5 +28,5 @@ export function reverse(x: number): number {
     return 0;
   }
 
-  return result;
+  return (x < 0) ? (-1 * result) : result;
 }

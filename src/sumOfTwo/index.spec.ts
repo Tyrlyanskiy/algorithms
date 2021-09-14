@@ -23,5 +23,3 @@ describe('When sumOfTwo is called', () => {
     });
   });
 });
-
-

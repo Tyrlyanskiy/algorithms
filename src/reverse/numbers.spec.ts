@@ -1,4 +1,4 @@
-import { reverse } from '.';
+import { reverse } from './numbers';
 
 describe('When calling reverse', () => {
   it('should return 321 for 123', () => {
