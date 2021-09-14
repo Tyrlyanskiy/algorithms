@@ -1,4 +1,4 @@
-import { sumOfTwo } from './sumOfTwo';
+import { sumOfTwo } from '.';
 
 describe('When sumOfTwo is called', () => {
   describe('and numbers are found', () => {
