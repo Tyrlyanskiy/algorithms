@@ -4,26 +4,16 @@ You may assume that each input would have exactly one solution, and you may not 
 */
 
 export const sumOfTwo = (nums: number[], target: number): number[] => {
-  nums.sort((a, b) => a - b);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const storage: any = {};
 
-  let leftIndex = 0;
-  let rightIndex = nums.length - 1;
-
-  while (leftIndex < rightIndex) {
-    const sum = nums[leftIndex] + nums[rightIndex];
-
-    if (sum === target) {
-      return [leftIndex, rightIndex];
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    if (storage[num] !== undefined) {
+      return [storage[num], i];
     }
-
-    if (sum < target) {
-      leftIndex += 1;
-    }
-
-    if (sum > target) {
-      rightIndex += 1;
-    }
+    storage[target - num] = i;
   }
 
-  throw new Error('Input array does not have to elements with sum equals to target');
+  return [];
 };
